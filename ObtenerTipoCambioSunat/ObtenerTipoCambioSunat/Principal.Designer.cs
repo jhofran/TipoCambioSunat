@@ -174,6 +174,7 @@
             this.COL_COMPRA.HeaderText = "COMPRA";
             this.COL_COMPRA.Name = "COL_COMPRA";
             this.COL_COMPRA.ReadOnly = true;
+            this.COL_COMPRA.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.COL_COMPRA.Width = 70;
             // 
             // COL_VENTA
@@ -183,6 +184,7 @@
             this.COL_VENTA.HeaderText = "VENTA";
             this.COL_VENTA.Name = "COL_VENTA";
             this.COL_VENTA.ReadOnly = true;
+            this.COL_VENTA.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.COL_VENTA.Width = 70;
             // 
             // Principal

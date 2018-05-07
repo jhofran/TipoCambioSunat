@@ -49,9 +49,44 @@ namespace ObtenerTipoCambioSunat
             DateTime vi_fch_inicio = new DateTime(int.Parse(vi_periodo), int.Parse(vi_mes), 1);
             DateTime vi_fch_termin = vi_fch_inicio.AddMonths(1).AddDays(-1);
 
-            while (vi_fch_inicio<=vi_fch_termin) {
-                dataGridView1.Rows.Add(vi_fch_inicio.ToShortDateString(), 0.000, 0.000);
+            while (vi_fch_inicio <= vi_fch_termin)
+            {
+                dataGridView1.Rows.Add(vi_fch_inicio.ToShortDateString(), 0.0d, 0.0d);
                 vi_fch_inicio = vi_fch_inicio.AddDays(1);
+            }
+
+            HtmlElementCollection pulledtags = webBrowser1.Document.GetElementsByTagName("td");
+            int n_r = 0;
+            int n_fila_ult = -1;
+            int n_fila_grid = dataGridView1.RowCount;
+
+            foreach (HtmlElement item in pulledtags)
+            {
+                if (item.OuterHtml.IndexOf("class=H3") > 0)
+                {
+                    for (x = n_fila_ult; x <= n_fila_grid - 1; x++)
+                    {
+                        n_fila_ult += 1;
+                        if (dataGridView1.Rows[n_fila_ult].Cells[0].Value.Equals(item.InnerText.Trim().PadLeft(2, '0') + '/' + vi_mes.PadLeft(2, '0') + '/' + vi_periodo))
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                if (item.OuterHtml.IndexOf("class=tne10") > 0)
+                {
+                    if (n_r == 0)
+                    {
+                        dataGridView1.Rows[n_fila_ult].Cells[1].Value = item.InnerText;
+                        n_r += 1;
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[n_fila_ult].Cells[2].Value = item.InnerText;
+                        n_r = 0;
+                    }
+                }
             }
 
             //MessageBox.Show(str);
