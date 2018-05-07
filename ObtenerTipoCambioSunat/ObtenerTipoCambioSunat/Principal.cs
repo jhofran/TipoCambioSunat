@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ObtenerTipoCambioSunat
@@ -89,8 +82,13 @@ namespace ObtenerTipoCambioSunat
                 }
             }
 
-            //MessageBox.Show(str);
+        }
 
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Document.GetElementById("mes").SetAttribute("value", (comboBox1.SelectedIndex + 1).ToString().PadLeft(2, '0'));
+            webBrowser1.Document.GetElementById("anho").SetAttribute("value", numericUpDown1.Value.ToString());
+            webBrowser1.Document.GetElementById("B1").InvokeMember("Click");
         }
     }
 }
