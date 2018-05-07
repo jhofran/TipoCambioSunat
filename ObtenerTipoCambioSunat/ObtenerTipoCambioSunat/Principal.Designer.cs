@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -160,8 +160,8 @@
             // 
             // COL_FECHA
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.COL_FECHA.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.COL_FECHA.DefaultCellStyle = dataGridViewCellStyle4;
             this.COL_FECHA.HeaderText = "FECHA";
             this.COL_FECHA.Name = "COL_FECHA";
             this.COL_FECHA.ReadOnly = true;
@@ -170,8 +170,8 @@
             // COL_COMPRA
             // 
             this.COL_COMPRA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.COL_COMPRA.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.COL_COMPRA.DefaultCellStyle = dataGridViewCellStyle5;
             this.COL_COMPRA.HeaderText = "COMPRA";
             this.COL_COMPRA.Name = "COL_COMPRA";
             this.COL_COMPRA.ReadOnly = true;
@@ -180,8 +180,8 @@
             // 
             // COL_VENTA
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.COL_VENTA.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.COL_VENTA.DefaultCellStyle = dataGridViewCellStyle6;
             this.COL_VENTA.HeaderText = "VENTA";
             this.COL_VENTA.Name = "COL_VENTA";
             this.COL_VENTA.ReadOnly = true;
@@ -197,7 +197,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "Principal";
-            this.Text = "Form1";
+            this.Text = "Consulta SUNAT";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
